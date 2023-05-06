@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>HTML Todo List | Major Project</title>
+        <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">       
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">
+                    <img src="data:image/png;base64,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"
+                    class="img fluid" alt="logo" width="150">
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
+                    <i class="bi bi-list"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <div class="navbar-nav ms-auto">
+                        
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="container p-5">
+            <div class="mb-3">
+                <button type="button" class="btn btn-outline-primary" onclick="showAddTextModal()">Add Task</button>
+            </div>
+            <div class="d-flex justify-content-center">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <table class="table">
+                                <thead class="text-center">
+                                    <th>#</th>
+                                    <th>Task/Description</th>
+                                    <th>Responsible</th>
+                                    <th>ETA</th>
+                                    <th>Action</th>
+                                </thead>
+                                <tbody class="text-center" id="taskTableBody">
+                                 
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="addTaskModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addTaskModalLabel" aria-hidden="true">
+            <form id="taskInputForm">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addTaskModalLabel">Add Task</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-1">
+                                <label for="addTaskTextArea" class="form-label">Task/Description</label>
+                                <textarea class="form-control" id="addTaskTextArea" name="taskDescription" rows="3" placeholder="Add your Task/Description"></textarea>
+                            </div>
+                            <div class="mb-1">
+                                <label for="addResponsibleperson" class="form-label">Responsible</label>
+                                <input type="text" class="form-control" id="addResponsiblePerson" name="taskResponsiblePerson" placeholder="Add the Responsible Person's Name">
+                            </div>
+                            <div class="mb-1">
+                                <label for="addTaskResponsible" class="form-label">ETA</label>
+                                <input type="datetime-local" class="form-control" id=addETA name="taskETA" placeholder="Click to Add time">
+                            </div>
+                        </div>
+                        <div class="modal-footer">(
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary" onclick="addTask()">Add Task</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="modal fade" id="updateTaskModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="updateTaskModalLabel" aria-hidden="true">
+            <form id="taskUpdateForm">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="editTaskModalLabel">Edit Task</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-1">
+                                <label for="editTaskTextArea" class="form-label">Task/Description</label>
+                                <textarea class="form-control" id="editTaskTextArea" name="taskDescription" rows="3" placeholder="Add your Task/Description"></textarea>
+                            </div>
+                            <div class="mb-1">
+                                <label for="editResponsibleperson" class="form-label">Responsible</label>
+                                <input type="text" class="form-control" id="editResponsiblePerson" name="taskResponsiblePerson" placeholder="Add the Responsible Person's Name">
+                            </div>
+                            <div class="mb-1">
+                                <label for="editTaskResponsible" class="form-label">ETA</label>
+                                <input type="datetime-local" class="form-control" id=editETA name="taskETA" placeholder="Click to Add time">
+                            </div>
+                            <input type="hidden" id="editIndex" name="taskIndex">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary" onclick="updateTask()">Add Task</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+        <script src="vendor/bootstrap/js/bootstrap.js"></script>
+        <script>
+            createHTMLfromStorage();
+            function showAddTextModal(){
+                $("#addTaskModal").modal('show');
+            }
+
+            function addTask(){
+                console.log('Add Task clicked');
+                $("#addTaskModal").modal('hide')
+                var dataArr = $("#taskInputForm").serializeArray();
+                var taskObject = new Object();
+                var storageObjectArr = [];
+                var storageObject = localStorage.getItem('taskStorage');
+                for(var i in dataArr){
+                    var name = dataArr[i]['name']
+                    var value = dataArr[i]['value']
+                    taskObject[name]=value
+                }
+                if(storageObject != null && storageObject != undefined && storageObject != ''){
+                    storageObjectArr = JSON.parse(storageObject)
+                    storageObjectArr.push(taskObject)
+                }else{
+                    storageObjectArr.push(taskObject)
+                }
+                localStorage.setItem('taskStorage',JSON.stringify(storageObjectArr))
+                createHTMLfromStorage()
+                $('#taskInputForm').trigger('reset')
+            }
+
+            function createHTMLfromStorage(){
+                var storageObjectArr = [];
+                var storageObject = localStorage.getItem('taskStorage');
+                var storageObjectArr = JSON.parse(storageObject);
+                var html = '';
+                console.log(storageObjectArr)
+                if(storageObject != null && storageObject != undefined && storageObject != ''){
+                    if(storageObjectArr && storageObjectArr.length > 0){
+                        for(let i in storageObjectArr){
+                            var date = new Date(storageObjectArr[i]['taskETA'])
+                            html = html +'<tr>'
+                                        +'<td>'+ (parseInt(i)+1) +'</td>'
+                                        +'<td>'+ storageObjectArr[i]['taskDescription'] +'</td>'
+                                        +'<td>'+ storageObjectArr[i]['taskResponsibleDescription'] +'</td>'
+                                        +'<td>'+ date.toUTCString() +'</td>'
+                                        +'<td><i class="bi bi-check-circle-fill" onclick="markAsDone('+i+')"></i><i class="bi bi-pencil-square" onclick="editTask('+i+')"></i></td></tr>'
+                        }
+                    }else{
+                        html = '<tr><td colspan="5"> No Tasks Added yet</td></tr>'
+                    }
+                }
+                $("#taskTableBody").html(html)
+            }
+
+            function markAsDone(index){
+                console.log(index)
+                var storageObjectArr = [];
+                var storageObject = localStorage.getItem('taskStorage');
+                if(storageObject != null && storageObject != undefined && storageObject != ''){
+                    storageObjectArr = JSON.parse(storageObject);
+                    storageObjectArr.pop(index)
+                }
+                localStorage.setItem('taskStorage',JSON.stringify(storageObjectArr))
+                createHTMLfromStorage()
+            }
+
+            function editTask(index){
+                var storageObject = localStorage.getItem('taskStorage');
+                var storageObjectArr = [];
+                if(storageObject != null && storageObject != undefined && storageObject != ''){
+                    storageObjectArr = JSON.parse(storageObject)
+                    $("#editTaskTextArea").val(storageObjectArr[index]['taskDescription'])
+                    $("#editResponsibleperson").val(storageObjectArr[index]['taskResponsiblePerson'])
+                    $("#editETA").val(storageObjectArr[index]['taskETA'])
+                    $("#editIndex").val(index)
+                    $("#updateTaskModal").modal('show').
+                }
+                
+            }
+
+            function updateTask(){
+                $("#updateTaskModal").modal('hide')
+                var dataArr = $("#taskUpdateForm").serializeArray();
+                var taskObject = new Object();
+                var storageObjectArr = [];
+                var storageObject = localStorage.getItem('taskStorage');
+                for(var i in dataArr){
+                    var name = dataArr[i]['name']
+                    var value = dataArr[i]['value']
+                    taskObject[name]=value
+                }
+
+                if(storageObject != null && storageObject != undefined && storageObject != ''){
+                    storageObjectArr = JSON.parse(storageObject)
+                    storageObjectArr[taskObject['taskIndex']] = taskObject
+                }
+                localStorage.setItem('taskStorage',JSON.stringify(storageObjectArr))
+                createHTMLfromStorage()
+            }
+
+        </script>
+    </body>
+</html>
